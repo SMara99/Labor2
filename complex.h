@@ -7,7 +7,7 @@ class complex
 	public:
 
 		//default constructor
-		void constructor();
+		complex();
 
 		//constructor cu param
 		void constructor(double a_value, double b_value);
