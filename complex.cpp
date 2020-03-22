@@ -1,16 +1,20 @@
 #include "complex.h"
 #include <math.h>
 
-void complex::constructor() {
+complex::complex() {
 	//constructor fara parametrii
 	a = 0;
 	b = 0;
 }
 
-void complex::constructor(double a_value, double b_value) {
+complex::complex(double a_value, double b_value) {
 	//constructor cu parametrii
 	a = a_value;
 	b = b_value;
+}
+
+complex::~complex(){
+	//destructor
 }
 
 double complex::get_a() const {
