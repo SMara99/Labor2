@@ -10,7 +10,10 @@ class complex
 		complex();
 
 		//constructor cu param
-		void constructor(double a_value, double b_value);
+		complex(double a_value, double b_value);
+		
+		//destructor
+		~complex();
 
 		//getter
 		double get_a() const;
