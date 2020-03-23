@@ -2,13 +2,13 @@
 #include <math.h>
 
 complex::complex() {
-	//constructor fara parametrii
+	//constructor fara parametri
 	a = 0;
 	b = 0;
 }
 
 complex::complex(double a_value, double b_value) {
-	//constructor cu parametrii
+	//constructor cu parametri
 	a = a_value;
 	b = b_value;
 }
@@ -82,4 +82,60 @@ double complex::abs() {
 		sqrt(this->get_a() * this->get_a() + this->get_b() * this->get_b());
 
 	return result;
+}
+
+complex::complexa(double real, double imaginar)
+//constructor
+{
+	a = real;
+	b = imaginar;
+}
+
+double complex::getreal() const
+//returns the real part of the number
+{
+	return a;
+}
+
+double complex::getimg() const
+//returns the imaginary part of the number
+{
+	return b;
+}
+
+void complex::show_compl()
+//returns a complex number
+{
+	double r, i;
+	r = this->getreal();
+	i = this->getimg();
+	if (i == 0)
+		cout << "The number " << r << " is not a complex number";
+	else
+		if (i < 0)
+			cout << r << " " << i << " " << "i";
+		else
+			cout << r << " + " << i << "i";
+}
+
+void complex::show_exp()
+//displays the exponential form of a complex number
+{
+	int t;
+	double r, i;
+	r = this->getreal();
+	i = this->getimg();
+	t = atan2(i, r);
+	cout << r << " * e^" << "(" << t << " * i)";
+}
+
+void complex::compute_polar()
+//displays the polar form of a complex number
+{
+	int t;
+	double r, i;
+	r = this->getreal();
+	i = this->getimg();
+	t = atan2(i, r);
+	cout << "z = " << r << " * (cos" << t << " + isin" << t << ")";
 }

@@ -29,5 +29,20 @@ int main() {
 		s = s.add(vector[i]);
 	}
 
+
+	complex a(1, 2), b(6, 9), c(4, 20), d(8, 4);
+	complex vector[] = { a, b, c, d };
+	for (int i = 0; i < 4; i++)
+	{
+		vector[i].show_compl();
+		cout << endl;
+		cout << "exponential : ";
+		vector[i].show_exp();
+		cout << endl;
+		cout << "polar : ";
+		vector[i].compute_polar();
+		cout << endl;
+	}
+
 	return 0;
 }
